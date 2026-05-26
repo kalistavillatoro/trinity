@@ -1,0 +1,2288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U.S. College Athlete Pathway — Trinity Grammar School</title>
+  <meta name="description" content="Trinity Grammar School's structured pathway for student-athletes considering U.S. college sport. Supported by CAPS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ─────────────────────────────────────────────────────── */
+    :root {
+      --forest:       #1C3D2E;
+      --forest-mid:   #254E3A;
+      --forest-deep:  #152D22;
+      --forest-pale:  #EBF0EC;
+      --forest-tint:  #F1F5F2;
+      --cream:        #F5F2EC;
+      --cream-border: #E3DED5;
+      --white:        #FFFFFF;
+      --gold:         #8A7650;
+      --gold-light:   #B09A72;
+      --text:         #1A1A18;
+      --text-mid:     #3D3D38;
+      --text-muted:   #66665C;
+      --border:       #DEDAD2;
+      --border-light: #ECEAE4;
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+      --max-w:      1120px;
+      --content-w:  720px;
+    }
+
+    /* ── Reset ──────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    input, textarea, select {
+      font-family: var(--font-sans);
+      font-size: 15px;
+    }
+
+    /* ── Utility ────────────────────────────────────────────────────── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+    .content-narrow { max-width: var(--content-w); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .eyebrow {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 14px;
+    }
+    .eyebrow-muted { color: var(--text-muted); }
+    .eyebrow-white { color: rgba(255,255,255,0.6); }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600;
+      color: var(--forest);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .page-title.white { color: var(--white); }
+    .page-title.dark  { color: var(--text); }
+
+    .section-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 600;
+      color: var(--forest);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .section-heading.white { color: var(--white); }
+    .section-heading.dark  { color: var(--text); }
+
+    .lead {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--text-mid);
+    }
+    .lead.white { color: rgba(255,255,255,0.82); }
+
+    .rule {
+      width: 40px;
+      height: 2px;
+      background: var(--forest);
+      margin: 18px 0 24px;
+    }
+    .rule.gold { background: var(--gold); }
+    .rule.white { background: rgba(255,255,255,0.4); }
+
+    .section { padding: 80px 0; }
+    .section-sm { padding: 56px 0; }
+    .section-lg { padding: 100px 0; }
+    .bg-cream { background: var(--cream); }
+    .bg-forest { background: var(--forest); }
+    .bg-white  { background: var(--white); }
+
+    /* ── Buttons ────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--forest);
+      color: var(--white);
+      padding: 13px 28px;
+    }
+    .btn-primary:hover { background: var(--forest-mid); }
+    .btn-outline {
+      background: transparent;
+      color: var(--forest);
+      border: 1.5px solid var(--forest);
+      padding: 12px 26px;
+    }
+    .btn-outline:hover { background: var(--forest); color: var(--white); }
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.5);
+      padding: 12px 26px;
+    }
+    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .btn-ghost {
+      background: none;
+      color: var(--forest);
+      padding: 0;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid transparent;
+    }
+    .btn-ghost:hover { border-color: var(--forest); }
+    .btn svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── Top identity bar ───────────────────────────────────────────── */
+    .identity-bar {
+      background: var(--forest-deep);
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      padding: 7px 0;
+    }
+    .identity-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .identity-bar a { transition: color 0.2s; }
+    .identity-bar a:hover { color: rgba(255,255,255,0.9); }
+    .identity-bar-right { display: flex; gap: 20px; }
+
+    /* ── Navigation ─────────────────────────────────────────────────── */
+    .nav-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 2px solid var(--forest);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      cursor: pointer;
+    }
+    .nav-crest { width: 44px; height: 44px; flex-shrink: 0; }
+    .nav-brand-text { line-height: 1.25; }
+    .nav-brand-text strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--forest);
+      letter-spacing: 0.2px;
+    }
+    .nav-brand-text span {
+      font-size: 10.5px;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: var(--text-mid);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--forest); }
+    .nav-link.active { color: var(--forest); border-color: var(--forest); }
+    .nav-connect {
+      background: var(--forest);
+      color: var(--white) !important;
+      padding: 9px 20px;
+      height: auto !important;
+      margin: 0 0 0 8px;
+      border-bottom: none !important;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-connect:hover { background: var(--forest-mid) !important; }
+    .nav-connect.active { background: var(--forest-mid) !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--forest); }
+
+    /* ── Mobile menu ────────────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: var(--forest-deep);
+      padding: 28px 32px 40px;
+      flex-direction: column;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .mobile-close { background: none; border: none; cursor: pointer; color: white; font-size: 26px; }
+    .mobile-links { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-link {
+      padding: 16px 0;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .mobile-link:hover { color: white; }
+
+    /* ── Pages (JS-switched) ────────────────────────────────────────── */
+    [data-page] { display: none; }
+    [data-page].visible { display: block; }
+
+    /* ════════════════════════════════════════════════════════════════
+       HOME PAGE
+    ════════════════════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg, rgba(15,38,24,0.93) 0%, rgba(20,48,32,0.82) 50%, rgba(15,35,22,0.65) 100%),
+        url('https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=1800&auto=format&fit=crop&q=80')
+        center / cover no-repeat;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 100px 0 70px;
+      max-width: 700px;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero-kicker-line { width: 28px; height: 1px; background: rgba(138,118,80,0.8); }
+    .hero-kicker-text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(176,154,114,0.9);
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+    .hero-lead {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.76);
+      margin-bottom: 38px;
+      max-width: 560px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Home — Landscape section */
+    .landscape { padding: 80px 0; background: var(--white); }
+    .landscape-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .landscape-body p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+    .landscape-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 8px;
+    }
+    .landscape-stat {
+      background: var(--white);
+      padding: 24px 22px;
+    }
+    .landscape-stat-num {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--forest);
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+    .landscape-stat-label {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Home — Three pillars */
+    .pillars-home { padding: 72px 0; background: var(--cream); }
+    .pillars-home-header { margin-bottom: 48px; }
+    .pillars-home-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--cream-border);
+      border: 1px solid var(--cream-border);
+    }
+    .pillar-block {
+      background: var(--white);
+      padding: 36px 32px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .pillar-block:hover { background: var(--forest-tint); }
+    .pillar-num {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--forest);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .pillar-block h3 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .pillar-block p {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* Home — Timeline teaser */
+    .timeline-teaser {
+      padding: 80px 0;
+      background: var(--forest);
+    }
+    .timeline-teaser-header { max-width: 580px; margin-bottom: 52px; }
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .timeline-step {
+      padding: 32px 24px 32px 0;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .timeline-step:last-child { border-right: none; padding-right: 0; }
+    .timeline-step-year {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(176,154,114,0.85);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .timeline-step h4 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .timeline-step p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Home — CTA band */
+    .cta-band { padding: 72px 0; background: var(--white); border-top: 1px solid var(--border-light); }
+    .cta-band-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .cta-card {
+      background: var(--white);
+      padding: 36px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cta-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .cta-card h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--forest);
+      line-height: 1.3;
+    }
+    .cta-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      flex: 1;
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       THE PATHWAY PAGE
+    ════════════════════════════════════════════════════════════════ */
+    .page-header {
+      padding: 64px 0 52px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-header-inner { max-width: 660px; }
+
+    /* Governing bodies */
+    .governing { padding: 72px 0; background: var(--white); }
+    .governing-intro { max-width: 640px; margin-bottom: 48px; }
+    .governing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .governing-card {
+      background: var(--white);
+      padding: 32px 28px;
+    }
+    .governing-card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--forest);
+      background: var(--forest-pale);
+      padding: 3px 10px;
+      margin-bottom: 14px;
+    }
+    .governing-card h3 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .governing-card p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+    .governing-card .note {
+      font-size: 12.5px;
+      color: var(--gold);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Comparison table */
+    .comparison { padding: 72px 0; background: var(--cream); }
+    .comparison-intro { max-width: 640px; margin-bottom: 40px; }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+    }
+    .comparison-table th {
+      text-align: left;
+      padding: 14px 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--cream-border);
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table td {
+      padding: 16px 20px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.65;
+      color: var(--text-mid);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      width: 28%;
+    }
+    .comparison-table tr:nth-child(even) td { background: rgba(255,255,255,0.55); }
+    .table-wrapper {
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    /* Full timeline */
+    .full-timeline { padding: 80px 0; background: var(--white); }
+    .full-timeline-intro { max-width: 600px; margin-bottom: 52px; }
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 0;
+      margin-bottom: 0;
+      border-left: 2px solid var(--forest-pale);
+      padding-left: 28px;
+      margin-left: 54px;
+      position: relative;
+    }
+    .timeline-row + .timeline-row { margin-top: 40px; }
+    .timeline-row::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--forest);
+      border-radius: 50%;
+    }
+    .timeline-row-year {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--forest);
+      padding-top: 4px;
+      width: 110px;
+      flex-shrink: 0;
+    }
+    .timeline-row-body { flex: 1; }
+    .timeline-row-body h4 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .timeline-row-body p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+    .timeline-row-body ul {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .timeline-row-body li {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .timeline-row-body li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--forest);
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    /* Wellbeing / framing section */
+    .framing-band { padding: 80px 0; background: var(--forest); }
+    .framing-band-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .framing-item {
+      padding: 40px 28px 40px 0;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .framing-item:last-child { border-right: none; }
+    .framing-item h3 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .framing-item p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.62);
+    }
+    .framing-num {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.1);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    /* Notice band */
+    .notice-band {
+      padding: 36px 0;
+      background: var(--forest-pale);
+      border-top: 1px solid #C8D8CC;
+      border-bottom: 1px solid #C8D8CC;
+    }
+    .notice-band-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .notice-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--forest);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .notice-icon svg { width: 16px; height: 16px; fill: white; }
+    .notice-text { font-size: 14.5px; line-height: 1.7; color: var(--text-mid); }
+    .notice-text strong { color: var(--forest); }
+
+    /* ════════════════════════════════════════════════════════════════
+       FOUNDATIONS PAGE
+    ════════════════════════════════════════════════════════════════ */
+    .foundations-intro {
+      padding: 64px 0 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .foundations-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: end;
+      padding-bottom: 52px;
+    }
+    .foundations-scope {
+      background: var(--forest-pale);
+      border-left: 3px solid var(--forest);
+      padding: 20px 22px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-mid);
+      margin-top: 24px;
+    }
+    .foundations-scope strong { color: var(--forest); }
+    .foundations-advisory-note {
+      background: var(--cream);
+      border: 1px solid var(--cream-border);
+      padding: 20px 22px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-mid);
+      font-style: italic;
+    }
+
+    /* Resource library */
+    .resource-library { padding: 64px 0 80px; }
+    .resource-category { margin-bottom: 48px; }
+    .resource-category-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .resource-card {
+      background: var(--white);
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .resource-card:hover { background: var(--forest-tint); }
+    .resource-card-stage {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .resource-card h4 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+    }
+    .resource-card p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      flex: 1;
+    }
+    .resource-card-link {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--forest);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 4px;
+    }
+    .resource-card-link svg { width: 12px; height: 12px; fill: currentColor; }
+    .checklist { padding: 56px 0 80px; background: var(--cream); }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    .checklist-col h4 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--cream-border);
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.55;
+    }
+    .checklist-item:last-child { border-bottom: none; }
+    .checklist-box {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid var(--border);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .escalation-note {
+      margin-top: 40px;
+      padding: 28px 32px;
+      background: var(--white);
+      border: 1px solid var(--cream-border);
+    }
+    .escalation-note p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text-mid);
+      font-style: italic;
+    }
+    .escalation-note-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       ADVISORY PAGE
+    ════════════════════════════════════════════════════════════════ */
+    .advisory-intro { padding: 64px 0 52px; border-bottom: 1px solid var(--border); }
+    .advisory-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .advisory-intro-body p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+    .advisory-intro-aside {
+      background: var(--cream);
+      border-top: 3px solid var(--forest);
+      padding: 28px 28px;
+    }
+    .advisory-intro-aside h4 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 14px;
+    }
+    .advisory-intro-aside p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .advisory-intro-aside p:last-child { margin-bottom: 0; }
+
+    /* Tiers */
+    .advisory-tiers { padding: 72px 0; background: var(--white); }
+    .advisory-tiers-header { max-width: 620px; margin-bottom: 52px; }
+    .tiers-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--border);
+    }
+    .tier {
+      padding: 40px 32px 44px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+    .tier:last-child { border-right: none; }
+    .tier-marker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .tier-num {
+      width: 32px;
+      height: 32px;
+      background: var(--forest-pale);
+      color: var(--forest);
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tier-num.active { background: var(--forest); color: var(--white); }
+    .tier-level {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .tier h3 {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .tier-provider {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .tier p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .tier-features {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+    .tier-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+    .tier-feature-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--forest);
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    /* Advisory process */
+    .advisory-process { padding: 72px 0; background: var(--cream); }
+    .advisory-process-header { max-width: 580px; margin-bottom: 44px; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--cream-border);
+      background: var(--cream-border);
+      gap: 1px;
+    }
+    .process-step {
+      background: var(--white);
+      padding: 28px 24px;
+    }
+    .process-step-num {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--forest);
+      opacity: 0.3;
+      margin-bottom: 12px;
+    }
+    .process-step h4 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .process-step p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       CONNECT PAGE
+    ════════════════════════════════════════════════════════════════ */
+    .connect-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 72px;
+      padding: 64px 0 80px;
+      align-items: start;
+    }
+    .connect-form-section h2 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .connect-form-section .form-note {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--forest); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-disclaimer {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-top: 14px;
+    }
+
+    .connect-aside { display: flex; flex-direction: column; gap: 24px; margin-top: 48px; }
+    .connect-info-card {
+      background: var(--cream);
+      padding: 28px 26px;
+      border-top: 2px solid var(--forest);
+    }
+    .connect-info-card h4 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    .connect-info-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .connect-info-card p:last-child { margin-bottom: 0; }
+    .connect-detail {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 10px;
+    }
+    .connect-detail svg { width: 15px; height: 15px; fill: var(--forest); flex-shrink: 0; margin-top: 2px; }
+
+    /* ── Footer ─────────────────────────────────────────────────────── */
+    .footer { background: var(--forest-deep); }
+    .footer-main {
+      padding: 52px 0 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 52px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand-name {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .footer-brand-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.5px;
+    }
+    .footer-brand-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+      max-width: 340px;
+    }
+    .footer-caps-note {
+      font-size: 12px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.38);
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      max-width: 340px;
+    }
+    .footer-col h5 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(176,154,114,0.85);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col li {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .footer-col li:hover { color: rgba(255,255,255,0.85); }
+    .footer-bottom {
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.28);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .landscape-grid,
+      .advisory-intro-grid,
+      .foundations-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+      .pillars-home-grid { grid-template-columns: 1fr; }
+      .governing-grid { grid-template-columns: 1fr; }
+      .timeline-steps { grid-template-columns: 1fr 1fr; }
+      .tiers-layout { grid-template-columns: 1fr; }
+      .tier { border-right: none; border-bottom: 1px solid var(--border); }
+      .tier:last-child { border-bottom: none; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .cta-band-grid { grid-template-columns: 1fr; }
+      .framing-band-grid { grid-template-columns: 1fr; }
+      .framing-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 32px 0; }
+      .connect-layout { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .resource-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      .timeline-steps { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .resource-grid { grid-template-columns: 1fr; }
+      .checklist-grid { grid-template-columns: 1fr; }
+      .comparison-table th:last-child,
+      .comparison-table td:last-child { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; gap: 10px; }
+      .hero-actions .btn { width: max-content; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Identity bar -->
+  <div class="identity-bar">
+    <div class="container identity-bar-inner">
+      <span>Trinity Grammar School &ensp;&middot;&ensp; Summer Hill, Sydney NSW</span>
+      <div class="identity-bar-right">
+        <a href="index.html">School Website</a>
+        <a href="#">Parent Portal</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-wrapper">
+    <div class="container nav-inner">
+      <div class="nav-brand" onclick="showPage('home')">
+        <svg class="nav-crest" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="crestGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#254E3A"/>
+              <stop offset="100%" stop-color="#1C3D2E"/>
+            </linearGradient>
+          </defs>
+          <path d="M10 10 L70 10 L70 52 Q40 78 10 52 Z" fill="url(#crestGrad)" stroke="#8A7650" stroke-width="1.5"/>
+          <line x1="40" y1="14" x2="40" y2="67" stroke="#8A7650" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="15" y1="36" x2="65" y2="36" stroke="#8A7650" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="26" cy="24" r="2.5" fill="#8A7650" opacity="0.65"/>
+          <circle cx="54" cy="24" r="2.5" fill="#8A7650" opacity="0.65"/>
+        </svg>
+        <div class="nav-brand-text">
+          <strong>Trinity Grammar School</strong>
+          <span>U.S. College Athlete Pathway</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <div class="nav-link active" data-nav="home" onclick="showPage('home')">Home</div>
+        <div class="nav-link" data-nav="pathway" onclick="showPage('pathway')">The Pathway</div>
+        <div class="nav-link" data-nav="foundations" onclick="showPage('foundations')">Pathway Foundations</div>
+        <div class="nav-link" data-nav="advisory" onclick="showPage('advisory')">Advisory Support</div>
+        <div class="nav-connect" data-nav="connect" onclick="showPage('connect')">Connect</div>
+      </nav>
+
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-top">
+      <div class="nav-brand" style="cursor:default;">
+        <div class="nav-brand-text">
+          <strong style="color:white;font-family:'Playfair Display',Georgia,serif;font-size:16px;">Trinity Grammar School</strong>
+          <span style="color:rgba(255,255,255,0.45);font-size:10px;letter-spacing:0.8px;text-transform:uppercase;">U.S. College Athlete Pathway</span>
+        </div>
+      </div>
+      <button class="mobile-close" onclick="closeMenu()">&#x2715;</button>
+    </div>
+    <nav class="mobile-links">
+      <div class="mobile-link" onclick="showPage('home');closeMenu()">Home</div>
+      <div class="mobile-link" onclick="showPage('pathway');closeMenu()">The Pathway</div>
+      <div class="mobile-link" onclick="showPage('foundations');closeMenu()">Pathway Foundations</div>
+      <div class="mobile-link" onclick="showPage('advisory');closeMenu()">Advisory Support</div>
+      <div class="mobile-link" onclick="showPage('connect');closeMenu()">Connect</div>
+    </nav>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       HOME PAGE
+  ══════════════════════════════════════════════════════════════════ -->
+  <div data-page="home" id="page-home" class="visible">
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <div class="hero-kicker-line"></div>
+            <span class="hero-kicker-text">School-Supported &ensp;&middot;&ensp; Academically Grounded</span>
+          </div>
+          <h1>A Structured Pathway<br/>to U.S. College Sport</h1>
+          <p class="hero-lead">Trinity Grammar School provides student-athletes and their families with structured, school-supported guidance for navigating the U.S. college athletic landscape — grounded in academic integrity and informed decision-making.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="showPage('pathway')">
+              Explore the Pathway
+              <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </button>
+            <button class="btn btn-outline-white" onclick="showPage('foundations')">Pathway Foundations</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Understanding the landscape -->
+    <section class="landscape">
+      <div class="container">
+        <div class="landscape-grid">
+          <div>
+            <span class="eyebrow">Understanding the Landscape</span>
+            <h2 class="section-heading">The U.S. college athletic system requires careful preparation</h2>
+            <div class="rule"></div>
+            <div class="landscape-body">
+              <p>For student-athletes in Years 9 through 12, the opportunity to compete at a U.S. college is genuinely available — but the pathway is more structured, more time-sensitive, and more academically demanding than many families initially expect.</p>
+              <p>With over 1,000 accredited institutions, multiple governing bodies, and recruiting processes that begin earlier than most Australian students realise, navigating this landscape without structure can lead to missteps that are difficult to reverse.</p>
+              <p>Trinity Grammar School has established this pathway to ensure that student-athletes and their families are well-informed, academically positioned, and making decisions that reflect long-term fit rather than short-term opportunity.</p>
+            </div>
+          </div>
+          <div>
+            <div class="landscape-stats">
+              <div class="landscape-stat">
+                <div class="landscape-stat-num">1,100+</div>
+                <div class="landscape-stat-label">NCAA member institutions offering athletic programmes</div>
+              </div>
+              <div class="landscape-stat">
+                <div class="landscape-stat-num">Year 9</div>
+                <div class="landscape-stat-label">Earliest point at which formal recruiting contact may begin in some sports</div>
+              </div>
+              <div class="landscape-stat">
+                <div class="landscape-stat-num">3 Divisions</div>
+                <div class="landscape-stat-label">D1, D2, and D3 — each with distinct athletic, academic, and financial structures</div>
+              </div>
+              <div class="landscape-stat">
+                <div class="landscape-stat-num">All sports</div>
+                <div class="landscape-stat-label">Pathway applies across all accredited U.S. institutions and all NCAA-governed sports</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three pillars -->
+    <section class="pillars-home">
+      <div class="container">
+        <div class="pillars-home-header">
+          <span class="eyebrow">The Trinity Approach</span>
+          <h2 class="section-heading">Three foundations of the pathway</h2>
+        </div>
+        <div class="pillars-home-grid">
+          <div class="pillar-block" onclick="showPage('pathway')">
+            <div class="pillar-num">01</div>
+            <h3>Academic Positioning First</h3>
+            <p>U.S. colleges are academic institutions. Athletic ability opens doors; academic eligibility determines which doors remain open. The pathway ensures that academic planning precedes athletic planning at every stage.</p>
+          </div>
+          <div class="pillar-block" onclick="showPage('pathway')">
+            <div class="pillar-num">02</div>
+            <h3>Structured Timeline Awareness</h3>
+            <p>Recruiting has a distinct rhythm. Understanding when coaches look, when contact is permitted, and when decisions are typically made allows students to take the right steps at the right time — rather than reacting to pressure.</p>
+          </div>
+          <div class="pillar-block" onclick="showPage('foundations')">
+            <div class="pillar-num">03</div>
+            <h3>Fit Over Prestige</h3>
+            <p>Division I at a large research university is not the right fit for every student-athlete. The pathway framework helps students assess academic environment, athletic opportunity, geography, and financial implications together — not in isolation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline teaser -->
+    <section class="timeline-teaser">
+      <div class="container">
+        <div class="timeline-teaser-header">
+          <span class="eyebrow eyebrow-white">Year-by-Year Awareness</span>
+          <h2 class="section-heading white">Recruiting does not follow a single moment. It unfolds over four years.</h2>
+          <div class="rule white"></div>
+          <p class="lead white">Each school year carries different priorities, opportunities, and decisions. The pathway provides year-by-year guidance so that students and families can plan accordingly.</p>
+        </div>
+        <div class="timeline-steps">
+          <div class="timeline-step">
+            <span class="timeline-step-year">Year 9 &ndash; 10</span>
+            <h4>Foundation &amp; Awareness</h4>
+            <p>Build academic records, develop athletic profile, understand the U.S. system, begin watching college programmes of interest.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-step-year">Year 10 &ndash; 11</span>
+            <h4>Research &amp; Self-Assessment</h4>
+            <p>Narrow the institution list, understand eligibility requirements, begin building a highlight video, assess academic fit across programme types.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-step-year">Year 11</span>
+            <h4>Targeted Outreach</h4>
+            <p>Initial coach contact, NCAA Eligibility Centre registration, standardised testing awareness, refine highlight video and student-athlete resume.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-step-year">Year 12</span>
+            <h4>Decisions &amp; Commitment</h4>
+            <p>Official offers, application deadlines, transcript evaluation, visa and transition planning, and commitment to a programme.</p>
+          </div>
+        </div>
+        <div style="margin-top:40px;">
+          <button class="btn btn-outline-white" onclick="showPage('pathway')">View Full Timeline</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three CTAs -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band-grid">
+          <div class="cta-card">
+            <div class="cta-card-label">Start Here</div>
+            <h3>Explore the Pathway</h3>
+            <p>Understand the U.S. college athletic system, governing body structures, the Australian-to-U.S. academic translation, and what a realistic, well-considered pathway looks like from Year 9 to Year 12.</p>
+            <div>
+              <button class="btn btn-primary" onclick="showPage('pathway')">
+                The Pathway
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cta-card">
+            <div class="cta-card-label">Build Your Foundation</div>
+            <h3>Pathway Foundations</h3>
+            <p>Access early-stage resources covering NCAA basics, academic eligibility, outreach introduction, highlight video guidance, and fit considerations. An appropriate starting point for students in Years 9 through 11.</p>
+            <div>
+              <button class="btn btn-outline" onclick="showPage('foundations')">
+                Pathway Foundations
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cta-card">
+            <div class="cta-card-label">When Complexity Increases</div>
+            <h3>Advisory Support</h3>
+            <p>As recruiting becomes more competitive and personalised in Years 11 and 12, many families choose to access structured advisory support. Learn how individual guidance is structured and how it integrates with the school pathway.</p>
+            <div>
+              <button class="btn btn-outline" onclick="showPage('advisory')">
+                Advisory Support
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /home -->
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       THE PATHWAY PAGE
+  ══════════════════════════════════════════════════════════════════ -->
+  <div data-page="pathway" id="page-pathway">
+
+    <div class="page-header bg-cream">
+      <div class="container page-header-inner">
+        <span class="eyebrow">The Pathway</span>
+        <h1 class="page-title">Understanding the U.S. College Athletic System</h1>
+        <p class="lead">The U.S. college athletic landscape is unlike anything in the Australian education system. This section provides the foundational knowledge student-athletes and families need to approach the process with clear expectations and sound judgement.</p>
+      </div>
+    </div>
+
+    <!-- Notice -->
+    <div class="notice-band">
+      <div class="container notice-band-inner">
+        <div class="notice-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <p class="notice-text"><strong>This pathway applies across all sports and all accredited U.S. universities.</strong> Sport-specific guidance is provided where relevant to recruiting intensity and the visibility requirements of particular programmes. Students in any NCAA-governed sport — from rowing and swimming to rugby, soccer, golf, tennis, and track — are equally served by this framework.</p>
+      </div>
+    </div>
+
+    <!-- Governing bodies -->
+    <section class="governing">
+      <div class="container">
+        <div class="governing-intro">
+          <span class="eyebrow">Governing Bodies</span>
+          <h2 class="section-heading">NCAA, NAIA, and the Division Structure</h2>
+          <div class="rule"></div>
+          <p class="lead">The U.S. college sport system operates across multiple governing bodies and divisional structures, each with distinct scholarship rules, academic requirements, and competitive expectations.</p>
+        </div>
+        <div class="governing-grid">
+          <div class="governing-card">
+            <div class="governing-card-tag">NCAA Division I</div>
+            <h3>The highest level of collegiate competition</h3>
+            <p>Division I institutions are typically large research universities with the most visible athletic programmes. D1 schools may offer full or partial athletic scholarships (termed "grants-in-aid"), and are governed by the strictest academic eligibility standards. Recruiting contact rules vary by sport and are tightly regulated. D1 is appropriate for student-athletes capable of competing at the highest levels and maintaining strong academic performance in a high-pressure environment.</p>
+            <p class="note">Academic eligibility through the NCAA Eligibility Centre is mandatory for D1 participation.</p>
+          </div>
+          <div class="governing-card">
+            <div class="governing-card-tag">NCAA Division II</div>
+            <h3>Competitive sport with a balanced academic focus</h3>
+            <p>Division II schools offer partial athletic scholarships and maintain a strong emphasis on the student-athlete experience — often described as a more integrated academic and athletic model than D1. Institutions are typically mid-size universities. D2 is frequently the most appropriate and fulfilling pathway for student-athletes who want meaningful athletic competition without the singular intensity of D1 programmes.</p>
+            <p class="note">D2 Eligibility Centre registration requirements differ slightly from D1 — both are addressed in Pathway Foundations.</p>
+          </div>
+          <div class="governing-card">
+            <div class="governing-card-tag">NCAA Division III</div>
+            <h3>No athletic scholarships — academic merit recognised</h3>
+            <p>Division III institutions do not offer athletic scholarships. However, many offer substantial academic merit scholarships and need-based aid. The competitive level is genuine, and D3 schools are often small liberal arts colleges with outstanding academic reputations. For student-athletes with strong academic profiles, D3 can represent the best overall experience and should not be dismissed simply because athletic funding is unavailable.</p>
+          </div>
+          <div class="governing-card">
+            <div class="governing-card-tag">NAIA</div>
+            <h3>A separate governing body for smaller institutions</h3>
+            <p>The National Association of Intercollegiate Athletics governs a separate group of colleges and universities outside the NCAA structure. NAIA institutions can offer athletic aid and operate under different eligibility rules. Some sports are well-represented in NAIA; others are not. Families should understand NAIA as a legitimate and often underexplored option — particularly for student-athletes with specific geographic or academic preferences that align with NAIA member schools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="comparison">
+      <div class="container">
+        <div class="comparison-intro">
+          <span class="eyebrow">System Differences</span>
+          <h2 class="section-heading">Australia vs. the United States: key distinctions</h2>
+          <div class="rule"></div>
+          <p>For Australian student-athletes and families, understanding how the U.S. system differs from what is familiar is a critical first step. Misunderstanding these differences is one of the most common sources of misaligned expectations.</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Australian System</th>
+                <th>U.S. College System</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sport &amp; University</td>
+                <td>Largely separate — sport is pursued through clubs; universities provide limited athletic structures</td>
+                <td>Fully integrated — sport is embedded within the academic institution and tied to enrolment</td>
+              </tr>
+              <tr>
+                <td>Financial Support</td>
+                <td>Government loans, merit scholarships; no athletic-specific funding at university level</td>
+                <td>D1 and D2 institutions may offer athletic grants-in-aid covering tuition, accommodation, and fees</td>
+              </tr>
+              <tr>
+                <td>Academic Requirements</td>
+                <td>ATAR or equivalent determines entry; sport is irrelevant to admission in most cases</td>
+                <td>Academic eligibility is separately assessed by the NCAA Eligibility Centre; GPA and core courses are regulated</td>
+              </tr>
+              <tr>
+                <td>Recruiting Timeline</td>
+                <td>University admission is finalised in Year 12 through standard application processes</td>
+                <td>Recruiting typically begins Year 9–11 for many sports; verbal commitments often occur before Year 12</td>
+              </tr>
+              <tr>
+                <td>Commitment Model</td>
+                <td>Annual enrolment; student-athletes are free agents from an athletic perspective</td>
+                <td>Multi-year athletic agreement; transfers require eligibility waivers and may carry penalties</td>
+              </tr>
+              <tr>
+                <td>Coaching Relationship</td>
+                <td>Coaches are typically external to academic life</td>
+                <td>The head coach controls roster, scholarship, and playing time — the relationship is central to the experience</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full timeline -->
+    <section class="full-timeline">
+      <div class="container">
+        <div class="full-timeline-intro">
+          <span class="eyebrow">Year-by-Year Timeline</span>
+          <h2 class="section-heading">A structured view of the recruiting journey</h2>
+          <div class="rule"></div>
+          <p>The following represents the typical structure of U.S. college recruiting for Australian student-athletes. Individual timelines will vary by sport, division, and competitive level. This is a guide to awareness — not a rigid prescription.</p>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-row-year">Year 9 &ndash; 10</div>
+          <div class="timeline-row-body">
+            <h4>Foundation: Academic Focus and Early Awareness</h4>
+            <p>The primary priority in Years 9 and 10 is academic performance. The U.S. system values consistent academic records, and early high school results form part of the eligibility assessment. This is also the time to develop genuine awareness of the U.S. college landscape without premature decision-making.</p>
+            <ul>
+              <li>Prioritise academic performance in all core subjects</li>
+              <li>Begin watching collegiate programmes of potential interest</li>
+              <li>Understand the basic structures of NCAA D1, D2, D3, and NAIA</li>
+              <li>Continue athletic development through club and school sport</li>
+              <li>No formal outreach to coaches is expected or necessary at this stage</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-row-year">Year 10 &ndash; 11</div>
+          <div class="timeline-row-body">
+            <h4>Research: Building a Considered Institution List</h4>
+            <p>This is the stage for informed research and self-assessment. Families should begin to understand which types of institutions align with the student-athlete's academic aspirations, athletic level, preferred geographic location, and financial circumstances. The goal is a reasoned list — not a wishlist.</p>
+            <ul>
+              <li>Develop a long-list of institutions across D1, D2, D3, and NAIA</li>
+              <li>Assess academic programmes available in fields of genuine interest</li>
+              <li>Begin understanding the NCAA Eligibility Centre registration process</li>
+              <li>Develop an initial highlight video for feedback and self-assessment</li>
+              <li>Review academic transcript against NCAA core course requirements</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-row-year">Year 11</div>
+          <div class="timeline-row-body">
+            <h4>Outreach: Structured Communication Begins</h4>
+            <p>Year 11 is typically when meaningful outreach begins. For most sports, formal coach communication becomes permissible from a regulatory standpoint, and student-athletes who are well-prepared can begin targeted correspondence. Quality and specificity of outreach matters more than volume.</p>
+            <ul>
+              <li>Register with the NCAA Eligibility Centre (ncsasports.org and eligibilitycenter.org)</li>
+              <li>Prepare a concise student-athlete profile and highlight video</li>
+              <li>Begin targeted outreach to coaches at a refined list of institutions</li>
+              <li>Understand standardised testing requirements (SAT/ACT) where applicable</li>
+              <li>Review the implications of the U.S. visa and F-1 student status</li>
+              <li>Speak with Trinity's pathway coordinator about current status</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-row-year">Year 12</div>
+          <div class="timeline-row-body">
+            <h4>Decision: Offers, Applications, and Commitment</h4>
+            <p>The final year requires careful coordination between the athletic recruiting process, academic applications, financial consideration, and logistical planning. Decisions made under pressure in Year 12 benefit from the preparation undertaken in prior years. Families who have engaged the pathway process are significantly better positioned to evaluate offers clearly.</p>
+            <ul>
+              <li>Evaluate formal offers against academic, financial, and personal fit criteria</li>
+              <li>Complete college applications through the Common App or institution-specific portals</li>
+              <li>Arrange transcript evaluation through a recognised credentialing service</li>
+              <li>Understand the National Letter of Intent and its binding implications</li>
+              <li>Begin visa and transition planning in parallel with commitment</li>
+              <li>Notify Trinity of decisions to support school reference and documentation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Framing band -->
+    <section class="framing-band">
+      <div class="container">
+        <div style="margin-bottom:40px;">
+          <span class="eyebrow eyebrow-white">Principles of the Pathway</span>
+          <h2 class="section-heading white">The values that guide this framework</h2>
+        </div>
+        <div class="framing-band-grid">
+          <div class="framing-item">
+            <div class="framing-num">I</div>
+            <h3>Academic Integrity</h3>
+            <p>Athletic aspiration must never compromise academic integrity. The pathway is designed to ensure that academic positioning precedes and supports every athletic decision — not the reverse. A student-athlete who arrives at a U.S. institution academically underprepared faces significant risks to both their programme and their degree.</p>
+          </div>
+          <div class="framing-item">
+            <div class="framing-num">II</div>
+            <h3>Wellbeing and Realistic Expectations</h3>
+            <p>Living and competing in another country at 18 is a significant transition. The pathway addresses student wellbeing alongside recruiting mechanics — including the social, cultural, and psychological dimensions of committing to a programme on the other side of the world.</p>
+          </div>
+          <div class="framing-item">
+            <div class="framing-num">III</div>
+            <h3>Informed Family Engagement</h3>
+            <p>Parents play a constructive role when they are well-informed. The pathway provides structured guidance for parents on how to support — rather than direct — the recruiting process, and helps families understand the financial landscape with clarity and without unrealistic expectations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm bg-white" style="border-top:1px solid var(--border-light);">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+        <div>
+          <h3 style="font-family:var(--font-serif);font-size:22px;color:var(--forest);margin-bottom:6px;">Ready to build your foundation?</h3>
+          <p style="font-size:14px;color:var(--text-muted);">Pathway Foundations provides the early-stage tools to begin your preparation with confidence.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="showPage('foundations')">Pathway Foundations</button>
+          <button class="btn btn-outline" onclick="showPage('connect')">Speak with the Pathway Team</button>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /pathway -->
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       PATHWAY FOUNDATIONS PAGE
+  ══════════════════════════════════════════════════════════════════ -->
+  <div data-page="foundations" id="page-foundations">
+
+    <div class="foundations-intro bg-cream">
+      <div class="container">
+        <div class="foundations-intro-grid">
+          <div>
+            <span class="eyebrow">Pathway Foundations</span>
+            <h1 class="page-title">Early-Stage Guidance for Student-Athletes</h1>
+            <p class="lead">Pathway Foundations provides introductory resources to help student-athletes and their families develop a working understanding of the U.S. college athletic landscape. These materials are intended as a starting point — a foundation for informed conversations, not a substitute for structured guidance.</p>
+            <div class="foundations-scope">
+              <strong>Scope note:</strong> These resources are appropriate for students in Years 9 through 11 who are beginning to explore the U.S. pathway. They are designed to build foundational awareness across all sports and all accredited U.S. institutions.
+            </div>
+          </div>
+          <div>
+            <div class="foundations-advisory-note">
+              As recruiting becomes more competitive and personalised — particularly in Year 11 and Year 12 — many families find that foundational resources alone are insufficient for the specific decisions they face. At that point, structured advisory support becomes increasingly valuable. This transition is expected and encouraged: Pathway Foundations is a beginning, not a complete system.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resource library -->
+    <div class="resource-library">
+      <div class="container">
+
+        <div class="resource-category">
+          <div class="resource-category-label">
+            <span>Understanding the System</span>
+            <span>3 resources</span>
+          </div>
+          <div class="resource-grid">
+            <div class="resource-card">
+              <div class="resource-card-stage">Introductory &middot; Years 9–10</div>
+              <h4>NCAA Overview: Divisions, Rules, and What They Mean for You</h4>
+              <p>An introduction to the NCAA governance structure, how D1, D2, and D3 differ in practice, and what those differences mean for athletic scholarships, academic requirements, and daily student-athlete life.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Introductory &middot; Years 9–10</div>
+              <h4>NAIA, D3, and the Case Against Division Snobbery</h4>
+              <p>A balanced examination of options beyond D1, explaining why D2, D3, and NAIA institutions frequently deliver better overall experiences for student-athletes whose academic and athletic profiles align with those environments.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Introductory &middot; Years 9–11</div>
+              <h4>How an Australian Student Becomes Eligible: An Overview</h4>
+              <p>A plain-language explanation of the NCAA Eligibility Centre, what Australian academic transcripts look like to U.S. institutions, and the broad steps involved in establishing eligibility as an international student-athlete.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resource-category">
+          <div class="resource-category-label">
+            <span>Academic Eligibility</span>
+            <span>2 resources</span>
+          </div>
+          <div class="resource-grid">
+            <div class="resource-card">
+              <div class="resource-card-stage">Foundation &middot; Years 10–11</div>
+              <h4>Academic Eligibility Requirements: What You Need to Know Early</h4>
+              <p>NCAA Division I and II require student-athletes to complete a specified number of "core courses" with a minimum GPA. This guide explains how Australian subjects map to core course categories, and what subject choices in Years 10 and 11 can affect later eligibility.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Foundation &middot; Year 11</div>
+              <h4>Standardised Testing: SAT, ACT, and Test-Optional Policies</h4>
+              <p>Many U.S. institutions have moved to test-optional admissions. This guide explains current testing requirements, how the SAT and ACT differ, and how to make an informed decision about whether to test — and when.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Foundation &middot; All Years</div>
+              <h4>Academics First: Maintaining School Performance Alongside Athletics</h4>
+              <p>A guide for Trinity student-athletes on maintaining academic standards during periods of high athletic commitment — and why coaches at U.S. colleges prioritise academic reliability in their assessment of prospective recruits.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resource-category">
+          <div class="resource-category-label">
+            <span>Athletic Profile &amp; Outreach</span>
+            <span>3 resources</span>
+          </div>
+          <div class="resource-grid">
+            <div class="resource-card">
+              <div class="resource-card-stage">Introductory &middot; Years 10–11</div>
+              <h4>Your Highlight Video: Purpose, Principles, and Early Guidance</h4>
+              <p>Coaches watch highlight videos to assess movement quality, decision-making, and competitive level. This guide covers the fundamental principles of what makes a useful highlight video at the foundational stage, and what to avoid in early submissions.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Foundation &middot; Year 11</div>
+              <h4>Introduction to Coach Outreach: First Contact Principles</h4>
+              <p>An introduction to how student-athletes initiate contact with coaches — the expected format, appropriate language, and what information to include at an introductory level. This resource addresses early-stage outreach only; sport-specific and competitive-level strategy is addressed within advisory support.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Foundation &middot; Year 11</div>
+              <h4>Finding the Right Fit: A Framework for Evaluating Institutions</h4>
+              <p>A structured framework for assessing U.S. institutions across academic programme quality, athletic programme culture, geographic location, campus environment, and financial structure. Intended to move the evaluation process beyond rankings and name recognition.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resource-category">
+          <div class="resource-category-label">
+            <span>For Parents &amp; Families</span>
+            <span>2 resources</span>
+          </div>
+          <div class="resource-grid">
+            <div class="resource-card">
+              <div class="resource-card-stage">Parent Guide &middot; All Years</div>
+              <h4>A Parent's Introduction to U.S. College Athletic Pathways</h4>
+              <p>Designed for parents who are new to the U.S. college system. Covers the key structures, realistic financial expectations, common misconceptions, and how parents can support the process constructively without overstepping the boundaries coaches expect to see maintained.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Parent Guide &middot; Years 11–12</div>
+              <h4>Financial Considerations: What Families Need to Understand</h4>
+              <p>An honest overview of the financial dimensions of a U.S. college athletic pathway — including how athletic grants-in-aid work, the difference between athletic and academic funding, out-of-pocket costs that remain even with scholarship support, and how to evaluate offers accurately.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+            <div class="resource-card">
+              <div class="resource-card-stage">Wellbeing &middot; Year 12 &amp; Beyond</div>
+              <h4>Life in the U.S.: Transition, Identity, and Wellbeing</h4>
+              <p>A frank discussion of the personal dimensions of relocating to compete at a U.S. college — cultural adjustment, homesickness, the demands of being a full-time student-athlete, and how families can maintain meaningful connection across distance and time zones.</p>
+              <span class="resource-card-link">
+                Begin
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Checklist & escalation note -->
+    <section class="checklist">
+      <div class="container">
+        <span class="eyebrow">Early-Stage Checklist</span>
+        <h2 class="section-heading">Where to begin — a structured starting point</h2>
+        <div class="rule"></div>
+        <div class="checklist-grid">
+          <div class="checklist-col">
+            <h4>Academic Preparation</h4>
+            <div class="checklist-item"><div class="checklist-box"></div>Maintain strong performance across all HSC core subjects</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Review subject selections against NCAA core course requirements</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Understand the Eligibility Centre registration process and timeline</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Seek guidance on standardised testing requirements for target institutions</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Maintain consistent effort through periods of high athletic load</div>
+          </div>
+          <div class="checklist-col">
+            <h4>Athletic &amp; Research</h4>
+            <div class="checklist-item"><div class="checklist-box"></div>Develop a basic long-list of institutions across multiple division levels</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Begin watching collegiate programmes in your sport</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Capture game and training footage for future highlight video development</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Assess your athletic level honestly against D1, D2, D3, and NAIA expectations</div>
+            <div class="checklist-item"><div class="checklist-box"></div>Discuss your interest with Trinity's Director of Sport for school-level context</div>
+          </div>
+        </div>
+        <div class="escalation-note">
+          <div class="escalation-note-label">A note on advisory support</div>
+          <p>These foundational resources are designed to provide a strong starting point. As recruiting becomes more time-sensitive and personalised — particularly in Year 11 and Year 12, when coach communication, offer evaluation, and individual sport strategy become central — many families benefit from accessing structured advisory support through CAPS. That transition is a natural and expected part of the pathway, not an indication that the foundations have failed.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /foundations -->
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       ADVISORY SUPPORT PAGE
+  ══════════════════════════════════════════════════════════════════ -->
+  <div data-page="advisory" id="page-advisory">
+
+    <div class="advisory-intro bg-cream">
+      <div class="container">
+        <div class="advisory-intro-grid" style="padding:64px 0 52px;border-bottom:1px solid var(--border);">
+          <div class="advisory-intro-body">
+            <span class="eyebrow">Advisory Support</span>
+            <h1 class="page-title">When Personalised Guidance Becomes Valuable</h1>
+            <div class="rule"></div>
+            <p>Pathway Foundations provides every Trinity student-athlete with the knowledge needed to begin the process with clarity. For a number of students, particularly those pursuing competitive D1 or D2 programmes, or entering Year 11 with genuine interest in a U.S. college pathway, the complexity of the process increases significantly.</p>
+            <p>At that point — when outreach becomes sport-specific, coach relationships require individual strategy, and offer evaluation involves nuanced financial and contractual considerations — structured advisory support becomes a valuable complement to the school pathway.</p>
+            <p>Advisory support is not required by every student. It is available as a structured option for those whose pathway demands it.</p>
+          </div>
+          <div>
+            <div class="advisory-intro-aside">
+              <h4>Supported by CAPS</h4>
+              <p>Advisory services are provided in partnership with CAPS (College Athlete Placement Standard), a specialist advisory organisation whose work is focused exclusively on student-athlete pathways to U.S. collegiate competition.</p>
+              <p>CAPS advisors operate under the school pathway framework and are familiar with Trinity's academic environment, expectations, and values. Advisory engagements are structured to complement — not replace — the school's guidance.</p>
+              <p>Advisory services are independently operated by CAPS. Trinity Grammar School facilitates access to these services and does not operate them directly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three tiers -->
+    <section class="advisory-tiers">
+      <div class="container">
+        <div class="advisory-tiers-header">
+          <span class="eyebrow">Structure of Support</span>
+          <h2 class="section-heading">Three levels — each appropriate to a different stage of the pathway</h2>
+          <div class="rule"></div>
+          <p>The structure below reflects a natural progression from school-provided foundation through to individualised advisory. Students and families may access each level in sequence or move directly to the level most appropriate to their circumstances and timeline.</p>
+        </div>
+        <div class="tiers-layout">
+          <div class="tier">
+            <div class="tier-marker">
+              <div class="tier-num">1</div>
+              <div class="tier-level">Foundational</div>
+            </div>
+            <h3>Pathway Foundations</h3>
+            <p class="tier-provider">Provided by Trinity Grammar School</p>
+            <p>School-provided resources covering the foundational knowledge needed to understand the U.S. college athletic system. Appropriate for all interested student-athletes from Year 9 onwards. Self-guided and available to all Trinity families through this portal.</p>
+            <div class="tier-features">
+              <div class="tier-feature"><div class="tier-feature-dot"></div>NCAA and NAIA system overview</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Academic eligibility introduction</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Highlight video principles</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Fit and institution assessment framework</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Parent overview resources</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Early-stage checklist</div>
+            </div>
+            <button class="btn btn-outline" onclick="showPage('foundations')">Access Foundations</button>
+          </div>
+
+          <div class="tier">
+            <div class="tier-marker">
+              <div class="tier-num active">2</div>
+              <div class="tier-level">Group Guidance</div>
+            </div>
+            <h3>Group Pathway Workshops</h3>
+            <p class="tier-provider">Delivered by CAPS &middot; Scheduled Sessions</p>
+            <p>Structured group sessions covering key topics in the U.S. college pathway. Workshops are topic-specific and offered at scheduled intervals throughout the year. Appropriate for students in Years 10 and 11 who are moving from awareness to active preparation.</p>
+            <div class="tier-features">
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Eligibility Centre registration and process</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Highlight video review and feedback</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Institution research methodology</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Introduction to coach communication</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Financial aid and offer structures</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Parent information sessions</div>
+            </div>
+            <button class="btn btn-outline" onclick="showPage('connect')">Enquire About Workshops</button>
+          </div>
+
+          <div class="tier">
+            <div class="tier-marker">
+              <div class="tier-num active">3</div>
+              <div class="tier-level">Individual Advisory</div>
+            </div>
+            <h3>Individual Advisory Programme</h3>
+            <p class="tier-provider">Delivered by CAPS &middot; Personalised Engagement</p>
+            <p>A fully individualised advisory programme for student-athletes in Year 11 or Year 12 with a genuine commitment to a U.S. college pathway. Advisory is sport-specific, institution-specific, and tailored to the student's academic profile, athletic level, and family circumstances.</p>
+            <div class="tier-features">
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Personal advisor assignment with sport-specific knowledge</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Tailored institution and division shortlisting</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Coach communication strategy and correspondence review</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Highlight video production guidance</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Offer evaluation and negotiation support</div>
+              <div class="tier-feature"><div class="tier-feature-dot"></div>Application, eligibility, and transition coordination</div>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('connect')">Enquire About Advisory</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="advisory-process">
+      <div class="container">
+        <div class="advisory-process-header">
+          <span class="eyebrow">How It Works</span>
+          <h2 class="section-heading">The advisory engagement process</h2>
+          <div class="rule"></div>
+          <p>Families wishing to access group or individual advisory support begin with a structured enquiry. The process is designed to establish whether advisory is appropriate, and — where it is — to ensure the engagement is well-matched to the student's stage, sport, and circumstances.</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-num">01</div>
+            <h4>Initial Enquiry</h4>
+            <p>Submit an enquiry through the Connect page. Provide basic information about the student, their sport, current year group, and the nature of your interest in the pathway.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">02</div>
+            <h4>Pathway Conversation</h4>
+            <p>A brief conversation with the Trinity pathway coordinator to understand the student's current position, academic context, and athletic ambitions. This informs which level of support is most appropriate.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">03</div>
+            <h4>CAPS Introduction</h4>
+            <p>Where group or individual advisory is appropriate, families are connected with the relevant CAPS contact. CAPS conducts its own initial assessment before confirming an engagement.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">04</div>
+            <h4>Structured Engagement</h4>
+            <p>Advisory engagement begins with clear scope, expectations, and milestones. Progress is coordinated with the school to ensure academic and athletic planning remain aligned throughout.</p>
+          </div>
+        </div>
+
+        <div class="escalation-note" style="margin-top:0;">
+          <div class="escalation-note-label">Important</div>
+          <p>Individual advisory through CAPS is a significant commitment of time and resource for both the student and the family. Trinity encourages families to engage the Pathway Foundations materials thoroughly before pursuing advisory, and to approach the process with realistic expectations about timeline, competition, and outcomes. Advisory support does not guarantee scholarship offers or specific outcomes — it improves the quality and confidence of the process.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /advisory -->
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       CONNECT PAGE
+  ══════════════════════════════════════════════════════════════════ -->
+  <div data-page="connect" id="page-connect">
+
+    <div class="page-header bg-cream">
+      <div class="container page-header-inner">
+        <span class="eyebrow">Connect</span>
+        <h1 class="page-title">Get in Touch with the Pathway Team</h1>
+        <p class="lead">Whether you have a question about the pathway, would like to discuss advisory options, or are ready to begin — use the form below to contact Trinity's pathway coordination team. Enquiries are typically responded to within two school days.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="connect-layout">
+        <div>
+          <div class="connect-form-section">
+            <h2>Send an Enquiry</h2>
+            <p class="form-note">All fields marked with an asterisk are required.</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-firstname">First Name *</label>
+                <input type="text" id="f-firstname" name="firstname" placeholder="James" />
+              </div>
+              <div class="form-group">
+                <label for="f-lastname">Last Name *</label>
+                <input type="text" id="f-lastname" name="lastname" placeholder="Walker" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-email">Email Address *</label>
+                <input type="email" id="f-email" name="email" placeholder="james.walker@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="f-phone">Phone Number</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="+61 4XX XXX XXX" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-year">Current Year Group *</label>
+                <select id="f-year" name="year">
+                  <option value="">Select year group</option>
+                  <option>Year 9</option>
+                  <option>Year 10</option>
+                  <option>Year 11</option>
+                  <option>Year 12</option>
+                  <option>Parent / Guardian</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-sport">Primary Sport *</label>
+                <input type="text" id="f-sport" name="sport" placeholder="e.g. Rugby, Swimming, Soccer" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-type">Nature of Enquiry *</label>
+              <select id="f-type" name="type">
+                <option value="">Select enquiry type</option>
+                <option>General pathway question</option>
+                <option>Pathway Foundations — guidance on materials</option>
+                <option>Group workshop information</option>
+                <option>Individual advisory — initial enquiry</option>
+                <option>Academic eligibility question</option>
+                <option>Parent / family information session</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-message">Message *</label>
+              <textarea id="f-message" name="message" placeholder="Please describe your question or the nature of your interest in the pathway. The more context you provide, the better we can direct your enquiry."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">
+              Submit Enquiry
+              <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+            <p class="form-disclaimer">Your information is held in accordance with Trinity Grammar School's privacy policy and will only be shared with CAPS where relevant to your enquiry and with your consent. Trinity Grammar School does not on-sell personal data.</p>
+          </div>
+        </div>
+
+        <div class="connect-aside">
+          <div class="connect-info-card">
+            <h4>Pathway Coordinator</h4>
+            <p>Trinity Grammar School's U.S. College Athlete Pathway is coordinated through the Director of Sport's office.</p>
+            <div class="connect-detail">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              119 Prospect Road, Summer Hill NSW 2130
+            </div>
+            <div class="connect-detail">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              (02) 9716 9555
+            </div>
+            <div class="connect-detail">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              athlete.pathway@trinity.nsw.edu.au
+            </div>
+          </div>
+
+          <div class="connect-info-card">
+            <h4>Response Times</h4>
+            <p>General pathway enquiries are responded to within two school days.</p>
+            <p>Advisory enquiries are routed to the CAPS team and typically receive an initial response within three to five business days.</p>
+            <p>The pathway coordination office operates during school terms. Enquiries received during school holidays will be addressed in the first week of the following term.</p>
+          </div>
+
+          <div class="connect-info-card">
+            <h4>Before You Enquire</h4>
+            <p>Many common questions are addressed in detail across the Pathway Foundations section. Families in the early stages of exploration are encouraged to review the foundational resources before submitting an enquiry — this often provides the information needed and allows the coordination team to focus on more specific or complex questions.</p>
+            <button class="btn btn-ghost" style="margin-top:8px;" onclick="showPage('foundations')">
+              Go to Pathway Foundations
+              <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /connect -->
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-row">
+            <svg width="40" height="40" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10 L70 10 L70 52 Q40 78 10 52 Z" fill="#254E3A" stroke="#8A7650" stroke-width="1.5"/>
+              <line x1="40" y1="14" x2="40" y2="67" stroke="#8A7650" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="15" y1="36" x2="65" y2="36" stroke="#8A7650" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <div class="footer-brand-name">Trinity Grammar School</div>
+              <div class="footer-brand-sub">U.S. College Athlete Pathway</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">A school-supported initiative providing structured guidance for Trinity student-athletes navigating the U.S. college athletic landscape. Pathway infrastructure supported by CAPS.</p>
+          <p class="footer-caps-note">Advisory services are independently operated by CAPS (College Athlete Placement Standard). Trinity Grammar School facilitates access to these services but does not operate, control, or guarantee the outcomes of any advisory engagement. Advisory is an optional service and is not a condition of school enrolment or participation in school sport.</p>
+        </div>
+        <div class="footer-col">
+          <h5>The Pathway</h5>
+          <ul>
+            <li onclick="showPage('home')">Home</li>
+            <li onclick="showPage('pathway')">The Pathway</li>
+            <li onclick="showPage('foundations')">Pathway Foundations</li>
+            <li onclick="showPage('advisory')">Advisory Support</li>
+            <li onclick="showPage('connect')">Connect</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Trinity Grammar School</h5>
+          <ul>
+            <li onclick="window.location.href='index.html'">School Website</li>
+            <li>Director of Sport</li>
+            <li>Parent Portal</li>
+            <li>Enrolments</li>
+            <li>Contact the School</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2025 Trinity Grammar School. All rights reserved. ABN 12 000 000 000</span>
+      <span>Privacy Policy &ensp;&middot;&ensp; Child Safety Policy &ensp;&middot;&ensp; Disclaimer</span>
+    </div>
+  </footer>
+
+
+  <script>
+    // ── Page routing ─────────────────────────────────────────────────
+    function showPage(id) {
+      document.querySelectorAll('[data-page]').forEach(el => {
+        el.classList.remove('visible');
+      });
+      const target = document.getElementById('page-' + id);
+      if (target) target.classList.add('visible');
+
+      document.querySelectorAll('[data-nav]').forEach(el => {
+        el.classList.toggle('active', el.dataset.nav === id);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      window.location.hash = id;
+    }
+
+    // Init from hash
+    const initPage = window.location.hash.slice(1) || 'home';
+    showPage(initPage);
+
+    // ── Mobile menu ──────────────────────────────────────────────────
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ── Form submit (demo) ───────────────────────────────────────────
+    document.querySelector('[type="submit"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      const btn = this;
+      const orig = btn.innerHTML;
+      btn.textContent = 'Enquiry submitted';
+      btn.style.background = 'var(--forest-mid)';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
